@@ -1,14 +1,18 @@
-CROWD OS - PROPRIETARY LICENSE AGREEMENT
+CROWD OS - PROPRIETARY & ACADEMIC LICENSE
+Copyright © 2026 Prasurjya Deka. All Rights Reserved.
 
-1. COPYRIGHT OWNERSHIP
-The "Crowd OS" system architecture, the "Thermal Omni-Node" logic, and the "SecureEvent" aggregation algorithms described here in are the intellectual property of:
-© 2026 Prasurjya Deka. All Rights Reserved.
+1. OWNERSHIP
+The "Crowd OS" system architecture, specifically the logic of linking "Stationary Thermal Omni-Nodes" to "Mesh-Networked Wristbands," is the intellectual property of Prasurjya Deka.
 
-2. NO COMMERCIAL USE
-No permission is granted to any person or entity to sell, rent, license, or monetize the "Crowd OS" methodologies designed by Prasurjya Deka without express written permission.
+2. RESTRICTED USE (NON-COMMERCIAL)
+*   No Commercial Use: You may NOT use, copy, modify, or distribute this architecture for any commercial product, military application, or crowd management service without express written permission from Prasurjya Deka.
+*   Academic Use: Researchers may reference this work for academic study provided clear credit is given to the creator.
 
-3. DIFFERENTIATION FROM PRIOR ART
-This work is distinct from US Patent 12392583B2 (GovGPT/TactiGuard). The system designed by Prasurjya Deka strictly utilizes STATIONARY INFRASTRUCTURE sensors, not body-worn visual sensors.
+3. LEGAL DISTINCTION FROM PRIOR ART (US PATENT 12392583B2)
+This work is legally distinct from the "Body safety device with visual sensing" described in US Patent 12392583B2 (Assignee: GovernmentGPT Inc.).
+*   Crowd OS utilizes INFRASTRUCTURE-BASED sensors (clamped to poles/walls) to detect crowd density physics.
+*   Crowd OS does NOT utilize body-worn visual sensors or sensors integrated into tactical gear.
+*   Any attempt to conflate this stationary infrastructure system with body-worn tactical patents is rejected.
 
 4. THIRD-PARTY ATTRIBUTION
-This project incorporates the open-source PhysioKit architecture (Joshi et al., 2023) under the CC BY 4.0 license. The specific integration of PhysioKit into the "Crowd OS" mesh network is the design of Prasurjya Deka.
+This project utilizes hardware architecture adapted from the open-source "PhysioKit" [Joshi et al., 2023], licensed under CC BY 4.0.
