@@ -1,0 +1,14 @@
+# LICENSE AGREEMENT
+
+CROWD OS LICENSE (v2026)
+
+1. PROPRIETARY HARDWARE LOGIC
+The specific methodology of linking a "Stationary Thermal Node" to a "DeepLight-RPL Mesh Wristband" is claimed as the intellectual property of [Prasurjya Deka].
+*   Copyright © 2026 [Prasurjya Deka]. All Rights Reserved.
+
+2. RESTRICTED USE
+*   NO COMMERCIAL USE: You may not use this architecture for any commercial product, military application, or crowd control service without written permission.
+*   NO MILITARY/TACTICAL USE: This system is explicitly designed for civilian safety. Use in "tactical gear" or "weaponized" systems (as described in US Patent 12392583B2) is strictly prohibited.
+
+3. OPEN SOURCE DEPENDENCIES
+This project utilizes the PhysioKit architecture (Joshi et al.), licensed under CC BY 4.0 [Source 760]. This license applies ONLY to the physiological sensing module, not the Crowd OS aggregation logic.
