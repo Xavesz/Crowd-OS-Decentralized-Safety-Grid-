@@ -19,4 +19,4 @@ This work is legally and technically distinct from the "Body safety device with 
 Portions of the wearable hardware design are adapted from the open-source "PhysioKit" architecture.
 *   Original Work: Joshi, J., Wang, K., & Cho, Y. (2023). PhysioKit: An Open-Source, Low-Cost Physiological Computing Toolkit. Sensors, 23(19), 8244.
 *   License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
-*   Note: The PhysioKit license applies only to the physiological sensing module. The Crowd OS mesh networking and aggregation logic remain proprietary to Prasurjya Deka.
+*   Note: The PhysioKit framework is used solely for the physiological sensing module. The aggregation logic and mesh networking remain the proprietary intellectual property of Prasurjya Deka.
