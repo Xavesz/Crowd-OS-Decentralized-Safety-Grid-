@@ -1,14 +1,14 @@
-# LICENSE AGREEMENT
+CROWD OS - PROPRIETARY LICENSE AGREEMENT
 
-CROWD OS LICENSE (v2026)
+1. COPYRIGHT OWNERSHIP
+The "Crowd OS" system architecture, the "Thermal Omni-Node" logic, and the "SecureEvent" aggregation algorithms described here in are the intellectual property of:
+© 2026 Prasurjya Deka. All Rights Reserved.
 
-1. PROPRIETARY HARDWARE LOGIC
-The specific methodology of linking a "Stationary Thermal Node" to a "DeepLight-RPL Mesh Wristband" is claimed as the intellectual property of [Prasurjya Deka].
-*   Copyright © 2026 [Prasurjya Deka]. All Rights Reserved.
+2. NO COMMERCIAL USE
+No permission is granted to any person or entity to sell, rent, license, or monetize the "Crowd OS" methodologies designed by Prasurjya Deka without express written permission.
 
-2. RESTRICTED USE
-*   NO COMMERCIAL USE: You may not use this architecture for any commercial product, military application, or crowd control service without written permission.
-*   NO MILITARY/TACTICAL USE: This system is explicitly designed for civilian safety. Use in "tactical gear" or "weaponized" systems (as described in US Patent 12392583B2) is strictly prohibited.
+3. DIFFERENTIATION FROM PRIOR ART
+This work is distinct from US Patent 12392583B2 (GovGPT/TactiGuard). The system designed by Prasurjya Deka strictly utilizes STATIONARY INFRASTRUCTURE sensors, not body-worn visual sensors.
 
-3. OPEN SOURCE DEPENDENCIES
-This project utilizes the PhysioKit architecture (Joshi et al.), licensed under CC BY 4.0 [Source 760]. This license applies ONLY to the physiological sensing module, not the Crowd OS aggregation logic.
+4. THIRD-PARTY ATTRIBUTION
+This project incorporates the open-source PhysioKit architecture (Joshi et al., 2023) under the CC BY 4.0 license. The specific integration of PhysioKit into the "Crowd OS" mesh network is the design of Prasurjya Deka.
