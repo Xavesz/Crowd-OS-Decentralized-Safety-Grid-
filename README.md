@@ -1,26 +1,33 @@
 # Crowd OS: Autonomous Crowd Safety Grid
-**Principal Architect & Creator:** Prasurjya Deka
+**Principal Architect:** Prasurjya Deka
+**Contact:** prasurjyadeka130@gmail.com
 
 ## 1. Project Abstract
-Crowd OS is a privacy-safe crowd management system created by Prasurjya Deka. It utilizes a novel "Aggregate & Compare" logic where stationary thermal sensors detect crowd velocity, and wearable devices provide haptic guidance.
+Crowd OS is a privacy-safe crowd management system created by Prasurjya Deka. It prevents stampedes using a novel "Aggregate & Compare" logic where **Stationary Thermal Sensors** (on poles) detect panic velocity, and **Wearable Wristbands** provide haptic guidance.
 
-## 2. Technical Claims by Prasurjya Deka
-To establish authenticity and Prior Art, Prasurjya Deka claims the following unique system logic:
+## 2. Technical Claims & Novelty (Prior Art)
+To establish authenticity and non-infringement, Prasurjya Deka claims the following unique system architecture:
 
-### A. The "Privacy-Safe Eye" (Infrastructure-Based Sensing)
-*   **Innovation:** Unlike existing "Body Worn Safety Devices" (e.g., US Patent 12392583B2) which place cameras on tactical gear , the system designed by Prasurjya Deka uses **Stationary Thermal Omni-Nodes** (AMG8833 Sensors) clamped to poles .
-*   **Logic:** The system detects "High Density" patterns using a custom implementation of the **Watershed Algorithm**, separating merged heat blobs into headcounts .
+### A. Infrastructure-Based Sensing (The "Privacy-Safe Eye")
+**Distinction from US Patent 12392583B2:**
+Existing patents, such as US 12392583B2, describe "visual sensors integrated into tactical gear" worn by a user to detect personal threats .
+**Crowd OS is different:**
+*   **Stationary Deployment:** We use **Thermal Omni-Nodes** clamped to static infrastructure (walls/poles), NOT worn on the body.
+*   **Fluid Dynamics Logic:** We use the **Watershed Algorithm** to detect "High Density" flow patterns of the *entire* crowd, rather than individual threats to a single wearer.
 
-### B. The "SecureEvent" Dual-Trigger Logic
-The evacuation protocol designed by Prasurjya Deka activates ONLY when two independent variables are confirmed:
-1.  **Variable A (Infrastructure):** Thermal Node detects "High Velocity" (Panic Running).
-2.  **Variable B (Wearable):** Guardian Wristband detects "High Heart Rate" (Distress Signal).
+### B. The "SecureEvent" Dual-Trigger
+An evacuation alarm is triggered ONLY when two independent variables match:
+1.  **Infrastructure:** Thermal Node detects "High Velocity" (Panic Running).
+2.  **Wearable:** Guardian Wristband detects "High Heart Rate" (Physiological Distress).
 
-## 3. Hardware Architecture
-*   **Wristband Design:** The "Guardian Band" utilizes the RP2040 microcontroller and PPG sensors. This hardware integration was designed by Prasurjya Deka based on the open-source **PhysioKit** framework .
-*   **Network Topology:** The system uses the **DeepLight-RPL** protocol to create a "Bucket Brigade" mesh network, ensuring connectivity without 4G/5G .
+## 3. Hardware Stack & Attribution
+*   **Wearable:** The "Guardian Band" is built upon the open-source **PhysioKit** architecture (Joshi et al., UCL) [License: CC BY 4.0].
+*   **Sensor:** AMG8833 Infrared Array (Stationary).
+*   **Network:** DeepLight-RPL Mesh Protocol (Independent of 4G/5G).
 
-## 4. Contact & Verification
-For commercial inquiries regarding the Crowd OS architecture, contact the creator:
+## 4. Commercial Inquiries & Verification
+This repository serves as a **Defensive Publication** to establish Prior Art for Prasurjya Deka.
+For licensing inquiries or verification of ownership, please contact:
+
 **Prasurjya Deka**
-prasurjyadeka130@gmail.com
+📧 **Email:** prasurjyadeka130@gmail.com
