@@ -8,16 +8,32 @@
 **Contact:** prasurjyadeka130@gmail.com  
 
 ## 1. System Overview
-Crowd OS is an infrastructure-dependent crowd safety architecture designed to mitigate crush asphyxia and stampede risks in high-density environments. Unlike GPS-based solutions (which fail indoors) or cellular-dependent alerts (which fail during network congestion), this system operates on a localized **DeepLight-RPL Mesh Network**.
+Crowd OS is an infrastructure-dependent crowd safety architecture designed to mitigate crush asphyxia and stampede risks in high-density environments. It addresses the "Latency Trap" of CCTV and the "Connectivity Blackout" of cellular networks during mass events.
 
-The core innovation lies in the **"SecureEvent"** logic: a dual-validation protocol that cross-references **macro-crowd physics** (velocity/density) with **micro-biological data** (heart rate) to trigger autonomous evacuation guidance.
+The system utilizes a novel **"Aggregate & Compare"** logic where **Stationary Thermal Sensors** (mounted on poles) detect crowd velocity, and **Wearable Wristbands** provide haptic guidance and triangulation.
 
 > **⚠️ Prior Art & Patent Distinction**  
 > This architecture is explicitly distinct from "body-worn" safety devices described in **US Patent 12392583B2** (GovGPT Inc.). Crowd OS strictly utilizes **stationary infrastructure nodes** (clamped to poles/walls) for threat detection. It does **not** employ visual sensors or cameras integrated into tactical gear for threat identification.
 
 ---
 
-## 2. Technical Architecture
+## 2. Key Features & Innovations
+
+### A. The "Density-Crusher" (Stampede Prevention)
+*   **The Problem:** In high-density zones (e.g., mosh pits), standard cameras fail to count people when they merge into a single "blob."
+*   **The Solution:** We utilize **AMG8833 Thermal Omni-Nodes** combined with **Bicubic Interpolation** (to upscale low-res heat grids) and the **Watershed Algorithm**. This mathematically separates merged heat blobs to accurately count individuals even when standing shoulder-to-shoulder.
+
+### B. Silent Guidance (Directional Navigation)
+*   **The Problem:** Loudspeakers are inaudible during concerts or panic.
+*   **The Solution:** The "Guardian Band" provides **Visual Biofeedback**. If an exit is blocked, the band vibrates and displays a **Dynamic LED Arrow** on the 1.44" screen, silently guiding the crowd toward the nearest *low-density* exit, balancing the crowd flow automatically.
+
+### C. Rapid Reunion (Locating Lost People)
+*   **The Problem:** GPS fails indoors and under tents; cellular networks jam during mass events.
+*   **The Solution:** The system uses **Mesh Network Triangulation** (DeepLight-RPL protocol). Organizers can query a specific wristband ID (e.g., a lost child), and the grid triangulates their exact position relative to the thermal nodes, facilitating rapid retrieval without relying on 4G/5G.
+
+---
+
+## 3. Technical Architecture
 
 ### A. The "SecureEvent" Logic Pipeline
 The following diagram details the proprietary "Aggregate & Compare" decision tree designed by Prasurjya Deka. It visualizes the conversion of privacy-safe thermal grids into haptic safety guidance.
@@ -25,29 +41,21 @@ The following diagram details the proprietary "Aggregate & Compare" decision tre
 ![SecureEvent Logic Flow](SecureEvent_Logic_Flow_Architecture_by_Prasurjya_Deka.png)
 *Figure 1: The SecureEvent Architecture. Note the physical decoupling of the Stationary Thermal Node (Stage 1) from the Wearable Receiver (Stage 2).*
 
-#### Process Description
-1.  **Stage 1 (Infrastructure):** A stationary **AMG8833 Thermal Sensor** captures an 8x8 heat grid. The system applies **Bicubic Interpolation** (to smooth the grid) followed by the **Watershed Algorithm** to separate merged heat blobs (distinct humans) and calculate velocity vectors ($v$).
-2.  **Stage 2 (Wearable):** The **Guardian Band** captures raw PPG signals. Noise from motion artifacts is filtered using the **SQA-Phys 1D-CNN** model [Joshi et al., 2023].
-3.  **Stage 3 (Aggregation):** The system triggers a "Code Red" only if the Boolean condition is met:  
-    `IF (Infrastructure_Velocity > Threshold) AND (Cluster_HeartRate > Threshold)`
-
----
-
 ### B. Hardware Implementation (The Guardian Band)
-The wearable component acts as a receiver-actuator node within the mesh network. It does not perform visual recording.
+The wearable component is a low-cost receiver-actuator node built on the open-source **PhysioKit** architecture.
 
 ![Guardian Band Hardware](Guardian_Band_Hardware_Schematic_by_Prasurjya_Deka.png)
-*Figure 2: Hardware schematic of the Guardian Wristband. Featuring the RP2040 microcontroller and haptic motor integration.*
+*Figure 2: Hardware schematic of the Guardian Wristband. Featuring the RP2040 microcontroller, Haptic Motor, and 1.44" LED Display for directional arrows.*
 
 **Component Specifications:**
 *   **MCU:** RP2040 / ESP32-C3 (RISC-V)
 *   **Bio-Sensor:** PPG (Photoplethysmography) Optical Heart Rate Sensor.
-*   **Actuator:** Linear Resonant Actuator (LRA) for haptic feedback.
-*   **Network:** 802.15.4 Mesh Protocol (Independent of LTE/5G).
+*   **Feedback:** Linear Resonant Actuator (LRA) + LED Display.
+*   **Network:** DeepLight-RPL "Bucket Brigade" Mesh Protocol.
 
 ---
 
-## 3. System Topology
+## 4. System Topology
 The system utilizes a "Bucket Brigade" network topology to ensure signal propagation in dense crowds where human bodies attenuate RF signals.
 
 ```mermaid
@@ -60,7 +68,7 @@ graph TD
     subgraph WEARABLE [Mobile Zone - Wrist Worn]
         D[Guardian Wristband] -->|Detects Heart Rate| E(PhysioKit Sensor)
         C -.->|DeepLight-RPL Signal| D
-        E -->|Panic Confirmed| F{Haptic Vibration Motor}
+        E -->|Panic Confirmed| F{Haptic Vibration + LED Arrow}
     end
 
     style INFRASTRUCTURE fill:#f9f,stroke:#333,stroke-width:2px
@@ -68,7 +76,7 @@ graph TD
 ```
 
 --------------------------------------------------------------------------------
-4. Citation & Attribution
+5. Citation & Attribution
 If you use the concepts presented here for academic research, please cite this repository and the underlying open-source components.
 BibTeX Entry:
 @misc{deka2026crowdos,
@@ -84,7 +92,7 @@ Third-Party Components:
 • PhysioKit: Joshi, J., Wang, K., & Cho, Y. (2023). PhysioKit: An Open-Source, Low-Cost Physiological Computing Toolkit. Sensors, 23(19), 8244. Licensed under CC BY 4.0.
 
 --------------------------------------------------------------------------------
-5. Commercial Licensing
+6. Commercial Licensing
 Copyright © 2026 Prasurjya Deka. All Rights Reserved.
 This repository serves as a Defensive Publication.
 1. No Commercial Use: Unauthorized commercial reproduction, patenting, or sale of the "Stationary Thermal-Mesh" logic flow is strictly prohibited.
