@@ -1,18 +1,22 @@
 CROWD OS - PROPRIETARY & ACADEMIC LICENSE
 Copyright © 2026 Prasurjya Deka. All Rights Reserved.
 
-1. OWNERSHIP
-The "Crowd OS" system architecture, specifically the logic of linking "Stationary Thermal Omni-Nodes" to "Mesh-Networked Wristbands," is the intellectual property of Prasurjya Deka.
+1. COPYRIGHT OWNERSHIP
+The "Crowd OS" system architecture, specifically the "SecureEvent" logic linking Stationary Thermal Omni-Nodes to Mesh-Networked Wristbands, is the exclusive intellectual property of:
+Prasurjya Deka.
 
-2. RESTRICTED USE (NON-COMMERCIAL)
-*   No Commercial Use: You may NOT use, copy, modify, or distribute this architecture for any commercial product, military application, or crowd management service without express written permission from Prasurjya Deka.
-*   Academic Use: Researchers may reference this work for academic study provided clear credit is given to the creator.
+2. COMMERCIAL RESTRICTIONS (STRICTLY PROHIBITED)
+*   NO COMMERCIAL USE: You may NOT use, copy, modify, distribute, or sub-license this architecture, software, or logic flow for any commercial product, military application, or crowd management service without express written permission from Prasurjya Deka.
+*   NO DERIVATIVE WORKS: You may NOT create "remixes" or modified versions of the "SecureEvent" algorithm chain (Bicubic Interpolation -> Watershed -> Mesh Trigger) to sell as your own product.
 
 3. LEGAL DISTINCTION FROM PRIOR ART (US PATENT 12392583B2)
-This work is legally distinct from the "Body safety device with visual sensing" described in US Patent 12392583B2 (Assignee: GovernmentGPT Inc.).
-*   Crowd OS utilizes INFRASTRUCTURE-BASED sensors (clamped to poles/walls) to detect crowd density physics.
-*   Crowd OS does NOT utilize body-worn visual sensors or sensors integrated into tactical gear.
-*   Any attempt to conflate this stationary infrastructure system with body-worn tactical patents is rejected.
+This work is legally and technically distinct from the "Body safety device with visual sensing" described in US Patent 12392583B2 (Assignee: GovernmentGPT Inc.).
+*   Crowd OS utilizes STATIONARY INFRASTRUCTURE sensors (clamped to poles/walls) to detect crowd fluid dynamics.
+*   Crowd OS does NOT utilize body-worn visual sensors, cameras, or sensors integrated into tactical gear/vests.
+*   Any attempt to conflate this infrastructure-based system with body-worn tactical patents is rejected as factually incorrect.
 
-4. THIRD-PARTY ATTRIBUTION
-This project utilizes hardware architecture adapted from the open-source "PhysioKit" [Joshi et al., 2023], licensed under CC BY 4.0.
+4. THIRD-PARTY ATTRIBUTION (PHYSIOKIT)
+Portions of the wearable hardware design are adapted from the open-source "PhysioKit" architecture.
+*   Original Work: Joshi, J., Wang, K., & Cho, Y. (2023). PhysioKit: An Open-Source, Low-Cost Physiological Computing Toolkit. Sensors, 23(19), 8244.
+*   License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+*   Note: The PhysioKit license applies only to the physiological sensing module. The Crowd OS mesh networking and aggregation logic remain proprietary to Prasurjya Deka.
