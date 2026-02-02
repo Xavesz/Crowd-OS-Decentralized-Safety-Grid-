@@ -79,7 +79,7 @@ graph TD
 5. Citation & Attribution
 If you use the concepts presented here for academic research, please cite this repository and the underlying open-source components.
 BibTeX Entry:
-@misc{deka2026crowdos,
+@misc{prasurjyadeka2026crowdos,
   author = {Prasurjya,Deka},
   title = {Crowd OS: Distributed Thermal-Mesh Safety Grid},
   year = {2026},
